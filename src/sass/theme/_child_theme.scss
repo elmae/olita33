@@ -1,0 +1,233 @@
+ul,
+ol {
+	li {
+		line-height: 35px;
+		&:hover {
+			box-shadow: none !important;
+		}
+	}
+}
+
+p {
+	line-height: 35px !important;
+}
+
+#wrapper-hero {
+	min-height: 100vh;
+	margin-top: -12rem;
+}
+
+// * navbar styles
+.sticky-top {
+	transition: all 0.25s ease-in;
+}
+
+.navbar {
+	background-image: linear-gradient(
+		to top,
+		rgba(255, 255, 255, 0),
+		rgba(255, 255, 255, 4)
+	);
+}
+
+// * style for when sitcky is applied
+.stuck .navbar.sticky-top {
+	background-color: #fff !important;
+	border-bottom: 1px solid #fff;
+	color: #3b3b3b;
+	padding-top: 0.8rem !important;
+	padding-bottom: 0.8rem !important;
+}
+
+.oli-bg-primary {
+	background-color: #ffffff !important;
+}
+.oli-img img {
+	width: 100% !important;
+	padding-bottom: 2rem;
+	height: auto;
+}
+.top-nav-wrapper {
+	height: 50px;
+}
+// * sidebars styles
+
+#right-sidebar {
+	.wp-block-search__input {
+		border-radius: 1rem;
+	}
+	.wp-block-search__button {
+		border-radius: 1rem;
+	}
+	.wp-block-search__label {
+		display: none;
+	}
+	aside {
+		margin-bottom: ($spacer * 3) !important;
+	}
+}
+
+#right-sidebar,
+#left-sidebar {
+	h2,
+	h3 {
+		font-size: 1.2rem;
+		line-height: 24px;
+		position: relative;
+		margin-bottom: 24px;
+
+		&::after {
+			content: '';
+			width: calc(100% - 30px);
+			height: 2px;
+			border-bottom: 2px solid rgba(0, 0, 0, 0.07);
+			text-align: inherit;
+			bottom: -12px;
+			position: absolute;
+			right: 0;
+		}
+
+		&::before {
+			content: '';
+			width: 24px;
+			height: 2px;
+			border-bottom: 2px;
+			text-align: inherit;
+			bottom: -12px;
+			position: absolute;
+			background-color: $primary;
+		}
+	}
+}
+
+.non-break {
+	word-break: break-all !important;
+}
+.entry-meta span a {
+	text-decoration: none !important;
+
+	&:hover {
+		font-weight: bold !important;
+		transition: all 0.2s ease-out;
+	}
+}
+.widget {
+	ul li {
+		box-shadow: none;
+	}
+}
+.wp-block-tag-cloud {
+	line-height: 1rem !important;
+
+	a {
+		background: #f2f2f2;
+		color: $gray-500 !important;
+		padding: 0.6rem;
+		border-radius: 2px;
+		margin-bottom: 0.8rem;
+		margin-right: 0.6rem;
+		text-decoration: none;
+		text-transform: uppercase;
+		word-break: break-all;
+		font-size: 0.8rem !important;
+
+		&:hover {
+			background: $green;
+			color: $white !important;
+		}
+	}
+}
+
+// * widget related post
+ul {
+	&.oli-related-posts {
+		display: flex;
+		flex-wrap: wrap;
+		list-style-type: none !important;
+		gap: 10px;
+		margin-left: 0 !important;
+	}
+}
+
+li {
+	&.oli-related-posts {
+		flex: 1 1 180px;
+		padding: 15px;
+		box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+		border-radius: 4px;
+	}
+
+	&:hover {
+		box-shadow: 0 4px 10px #36476e;
+	}
+	.oli-related-posts {
+		// aspect-ratio: 16/10;
+		border-radius: 5px;
+	}
+}
+// footer section
+#wrapper-footer-full {
+	background-color: #3b3b3b !important;
+	color: #ffffff;
+
+	h2.wp-block-heading {
+		font-size: 24px;
+		margin-bottom: 25px;
+		letter-spacing: 1px;
+	}
+}
+#wrapper-footer {
+	background-color: #333333 !important;
+	color: $gray-200;
+	// border-top: 1px solid $gray-200;
+
+	a {
+		color: #d5d5d5;
+	}
+}
+.oli-online {
+	padding: 40px 0 40px 0;
+	margin-left: 20px;
+	margin-right: 20px;
+	border-bottom: 1px solid $gray-300;
+
+	ul li:first-child {
+		margin-right: 30px;
+	}
+}
+.btn-primary {
+	background-color: $green !important;
+	border-color: $green !important;
+	padding: 15px 35px;
+	border-radius: 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 12px;
+
+	&:hover {
+		background-color: $green-600 !important;
+	}
+}
+.footer-widget {
+	ul,
+	h2 {
+		list-style: none !important;
+		padding-left: 0 !important;
+		text-align: center;
+	}
+}
+footer {
+	.site-info {
+		font-size: 11px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
