@@ -14977,11 +14977,6 @@ p {
   line-height: 35px !important;
 }
 
-#wrapper-hero {
-  min-height: 100vh;
-  margin-top: -12rem;
-}
-
 .sticky-top {
   transition: all 0.25s ease-in;
 }
