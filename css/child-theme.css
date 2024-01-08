@@ -15183,6 +15183,11 @@ footer .site-info a:hover {
   text-decoration: underline;
 }
 
+#wrapper-hero .wp-block-cover, #wrapper-hero .wp-block-cover-image {
+  position: static;
+  min-height: 100vh !important;
+}
+
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;

@@ -36,5 +36,4 @@ $navbar_type       = get_theme_mod( 'understrap_navbar_type', 'collapse' );
       </a>
 
 
-
     </header><!-- #wrapper-navbar -->

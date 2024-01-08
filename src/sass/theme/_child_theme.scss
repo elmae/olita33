@@ -231,3 +231,9 @@ footer {
 		}
 	}
 }
+#wrapper-hero{
+	.wp-block-cover, .wp-block-cover-image{
+		position: static;
+		min-height: 100vh !important;
+	}
+}

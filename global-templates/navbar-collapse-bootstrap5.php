@@ -11,30 +11,6 @@ defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
-<!-- <div class="header-top d-none d-sm-none d-md-none d-lg-block">
-  <div class="<?php // echo esc_attr( $container ); ?>">
-    <div class="row">
-      <div class="top-nav-wrapper d-flex align-items-center">
-        <div class="col-md-3 top-nav-wrapper border-bottom border-end py-2">
-          <a href="#" class="text-primary fs-5 fw-light text-decoration-none">
-            Llame a (809) 924-6614
-          </a>
-        </div>
-        <div class="col-md-7 top-nav-wrapper border-bottom border-end py-2 ps-3">
-          <span>
-            Mn - St: 8:00am - 9:00pm, Sunday: CLOSED
-          </span>
-        </div>
-        <div class="col-md-2 top-nav-wrapper border-bottom mx-auto py-2 d-flex justify-content-evenly">
-          <i class="fa fa-facebook""></i>
-          <i class=" fa fa-instagram""></i>
-          <i class="fa fa-youtube""></i>
-					<i class=" fa fa-twitter""></i>
-        </div>
-      </div>
-    </div>
-  </div>
-</div> -->
 <span class="position-absolute trigger">
   <!-- hidden trigger to apply 'stuck' styles -->
 </span>
