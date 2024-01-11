@@ -32,6 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       aria-controls="navbarNavDropdown" aria-expanded="false"
       aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
       <span class="navbar-toggler-icon"></span>
+
     </button>
 
     <!-- The WordPress Menu goes here -->
@@ -49,10 +50,20 @@ $container = get_theme_mod( 'understrap_container_type' );
         )
       );
       ?>
-    <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram fa-2x mx-3"></i></a>
-    <a href="#" class="btn btn-primary">Reserve su cita</a>
 
 
   </div><!-- .container(-fluid) -->
+
+
+</nav><!-- #main-nav -->
+
+
+
+<!-- <div id="" class="d-none d-sm-block d-md-none">
+      <a href="http://" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram fa-2x mx-3"></i></a>
+      <a href="#" class="btn btn-primary">Reserve su cita</a>
+    </div> -->
+
+</div><!-- .container(-fluid) -->
 
 </nav><!-- #main-nav -->

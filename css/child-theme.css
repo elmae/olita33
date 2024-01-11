@@ -14981,8 +14981,20 @@ p {
   transition: all 0.25s ease-in;
 }
 
-.navbar {
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+.custom-logo-link img {
+  max-width: 150px !important;
+}
+
+.hacer-cita.btn-primary {
+  padding: 10px 20px !important;
+}
+.hacer-cita.btn-primary a {
+  color: #fff;
+}
+
+.navbar-toggler {
+  background-color: #266880;
+  border-style: none;
 }
 
 .stuck .navbar.sticky-top {
@@ -15188,6 +15200,15 @@ footer .site-info a:hover {
   min-height: 100vh !important;
 }
 
+#oli-menu {
+  display: block; /* Oculta el párrafo por defecto */
+}
+
+@media (min-width: 992px) {
+  #oli-menu {
+    display: none; /* Muestra el párrafo cuando la pantalla sea >= 992px */
+  }
+}
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
