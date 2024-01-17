@@ -15212,6 +15212,11 @@ footer .site-info a:hover {
     display: none; /* Muestra el párrafo cuando la pantalla sea >= 992px */
   }
 }
+@media (max-width: 990px) {
+  .nav-link {
+    color: #ffffff !important;
+  }
+}
 .has-blue-color,
 .has-blue-color:visited {
   color: #0d6efd;
