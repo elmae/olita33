@@ -14997,7 +14997,7 @@ p {
   border-style: none;
 }
 
-.stuck .navbar.sticky-top {
+.stuck .sticky-top {
   background-color: #fff !important;
   border-bottom: 1px solid #fff;
   color: #3b3b3b;
@@ -15196,8 +15196,11 @@ footer .site-info a:hover {
 }
 
 #wrapper-hero .wp-block-cover, #wrapper-hero .wp-block-cover-image {
-  position: static;
   min-height: 100vh !important;
+  margin-top: -100px;
+}
+#wrapper-hero .wp-block-cover__background {
+  opacity: 0.3;
 }
 
 #oli-menu {
