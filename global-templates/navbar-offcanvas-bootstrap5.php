@@ -31,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="offcanvas offcanvas-end bg-success bg-opacity-75" tabindex="-1" id="navbarNavOffcanvas">
+    <div class="offcanvas offcanvas-end bg-warning bg-opacity-75" tabindex="-1" id="navbarNavOffcanvas">
 
       <div class="offcanvas-header justify-content-end">
         <button class="btn-close btn-close-white text-reset" type="button" data-bs-dismiss="offcanvas"

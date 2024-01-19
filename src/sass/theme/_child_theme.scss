@@ -12,39 +12,9 @@ p {
 	line-height: 35px !important;
 }
 
-// #wrapper-hero {
-// 	min-height: 100vh;
-// 	margin-top: -12rem;
-// } 
 
 // * navbar styles
-.sticky-top {
-	transition: all 0.25s ease-in;
-}
-.custom-logo-link{
-	img{
-		max-width: 150px !important;
-	}
-}
-// .navbar {
-// 	background-image: linear-gradient(
-// 		to top,
-// 		rgba(255, 255, 255, 0),
-// 		rgba(255, 255, 255, 4)
-// 	);
-// }
-// boton en navbar 
-.hacer-cita.btn-primary{
-	padding: 10px 20px !important;
-a{
-color: #fff;
-}
-}
 
-.navbar-toggler{
-	background-color: $green;
-	border-style: none;
-}
 
 
 // * style for when sitcky is applied
@@ -149,7 +119,7 @@ color: #fff;
 		font-size: 0.8rem !important;
 
 		&:hover {
-			background: $green;
+			background: $primary;
 			color: $white !important;
 		}
 	}
@@ -182,7 +152,274 @@ li {
 		border-radius: 5px;
 	}
 }
-// footer section
+
+
+// imagen hero por debajo de navbar
+#wrapper-hero{
+	.wp-block-cover, .wp-block-cover-image{
+		min-height: 100vh !important;
+		margin-top: -100px;
+	}
+	.wp-block-cover__background{
+		opacity: 0.3;
+	}
+}
+
+#oli-menu {
+	display: block; /* Oculta el párrafo por defecto */
+}
+
+@media (min-width: 992px) {
+	#oli-menu {
+		display: none; /* Muestra el párrafo cuando la pantalla sea >= 992px */
+	}
+}
+ 
+@media (max-width: 990px){
+	.nav-link{
+		color: #ffffff !important;
+	}
+}
+
+
+// Variables ===================================================================
+
+$web-font-path: "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" !default;
+@if $web-font-path {
+  @import url($web-font-path);
+}
+// Mixins ======================================================================
+
+@mixin shadow($width: 2px){
+  border-style: solid;
+  border-width: 0 1px $width 1px;
+}
+
+// Navbar ======================================================================
+
+
+
+.bg-primary {
+  border-color: darken($primary, 5%);
+}
+
+.bg-dark {
+  border-color: darken($dark, 5%);
+}
+
+.bg-light {
+  background-color: $white !important;
+  border-color: darken($white, 5%);
+}
+
+//* Buttons =====================================================================
+
+.btn {
+  @include shadow();
+  text-transform: uppercase;
+
+  &:not(.disabled):hover {
+    margin-top: 1px;
+    border-bottom-width: 3px;
+  }
+
+  &:not(.disabled):active {
+    margin-top: 2px;
+    border-bottom-width: 2px;
+    @include box-shadow(none);
+  }
+
+  &-primary {
+    border-color: darken($primary, 5%);
+  }
+
+  &-secondary {
+    border-color: darken($secondary, 5%);
+  }
+
+  &-success {
+    border-color: darken($success, 5%);
+  }
+
+  &-info {
+    border-color: darken($info, 5%);
+  }
+
+  &-danger {
+    border-color: darken($danger, 5%);
+  }
+
+  &-warning {
+    border-color: darken($warning, 5%);
+  }
+
+  &-light {
+    border-color: darken($light, 5%);
+  }
+
+  &-dark {
+    border-color: darken($dark, 5%);
+  }
+}
+
+[class*="btn-outline"] {
+  border-top-width: 1px;
+}
+
+.btn-group-vertical {
+  .btn + .btn {
+    &:hover {
+      margin-top: -1px;
+      border-top-width: 1px;
+    }
+
+    &:active {
+      margin-top: -1px;
+      border-top-width: 2px;
+    }
+  }
+}
+.hacer-cita{
+
+	a{
+		color: $white !important;
+	}
+}
+
+//* Typography ==================================================================
+
+.text-secondary {
+  color: $gray-700 !important;
+}
+
+.blockquote-footer {
+  color: $gray-600;
+}
+
+// * Navs ========================================================================
+
+.sticky-top {
+	transition: all 0.25s ease-in;
+}
+.custom-logo-link{
+	img{
+		max-width: 150px !important;
+	}
+}
+
+// boton en navbar 
+
+
+.navbar-toggler{
+	background-color: $warning;
+	border-style: none;
+}
+
+.nav {
+  .open > a,
+  .open > a:hover,
+  .open > a:focus {
+    border-color: transparent;
+  }
+}
+
+.nav-tabs {
+  .nav-link {
+    color: $gray-800;
+
+    &,
+    &.disabled,
+    &.disabled:hover,
+    &.disabled:focus {
+      margin-top: 6px;
+      border-color: $nav-tabs-border-color;
+      transition: padding-bottom .2s ease-in-out, margin-top .2s ease-in-out, border-bottom .2s ease-in-out;
+    }
+
+    &:not(.disabled):hover,
+    &:not(.disabled):focus,
+    &.active {
+      padding-bottom: add(.5rem, 6px);
+      border-bottom-color: transparent;
+      margin-top: 0;
+    }
+  }
+
+  &.nav-justified > li {
+    vertical-align: bottom;
+  }
+}
+#main-menu {
+  .nav-link {
+    color: $gray-700;
+	}
+}
+.dropdown-menu {
+  margin-top: 0;
+  @include shadow();
+  border-top-width: 1px;
+  @include box-shadow(none);
+}
+
+.breadcrumb {
+  border-color: darken($primary, 5%);
+  @include shadow();
+}
+
+.pagination {
+  > li > a,
+  > li > span {
+    position: relative;
+    top: 0;
+    @include shadow();
+    color: $pagination-color;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      top: 1px;
+      border-bottom-width: 3px;
+      text-decoration: none;
+    }
+
+    &:active {
+      top: 2px;
+      border-bottom-width: 2px;
+    }
+  }
+
+  > .disabled > a,
+  > .disabled > span {
+    &:hover {
+      top: 0;
+      @include shadow();
+    }
+
+    &:active {
+      top: 0;
+      @include shadow();
+    }
+  }
+}
+
+.pager {
+  > li > a,
+  > li > span,
+  > .disabled > a,
+  > .disabled > span {
+    &,
+    &:hover,
+    &:active {
+      border-left-width: 2px;
+      border-right-width: 2px;
+    }
+  }
+}
+
+// * Footer ========================================================================
+
 #wrapper-footer-full {
 	background-color: #3b3b3b !important;
 	color: #ffffff;
@@ -213,8 +450,8 @@ li {
 	}
 }
 .btn-primary {
-	background-color: $green !important;
-	border-color: $green !important;
+	background-color: $primary !important;
+	border-color: $primary !important;
 	padding: 15px 35px;
 	border-radius: 0;
 	text-transform: uppercase;
@@ -222,7 +459,7 @@ li {
 	font-size: 12px;
 
 	&:hover {
-		background-color: $green-600 !important;
+		background-color: $blue-600 !important;
 	}
 }
 .footer-widget {
@@ -246,31 +483,5 @@ footer {
 				text-decoration: underline;
 			}
 		}
-	}
-}
-// imagen hero por debajo de navbar
-#wrapper-hero{
-	.wp-block-cover, .wp-block-cover-image{
-		min-height: 100vh !important;
-		margin-top: -100px;
-	}
-	.wp-block-cover__background{
-		opacity: 0.3;
-	}
-}
-
-#oli-menu {
-	display: block; /* Oculta el párrafo por defecto */
-}
-
-@media (min-width: 992px) {
-	#oli-menu {
-		display: none; /* Muestra el párrafo cuando la pantalla sea >= 992px */
-	}
-}
- 
-@media (max-width: 990px){
-	.nav-link{
-		color: #ffffff !important;
 	}
 }

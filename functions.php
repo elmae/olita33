@@ -60,7 +60,16 @@ function add_child_theme_textdomain() {
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
-
+  // Agregar script personalizado al front-page o al home
+	function oli_nav_home() {
+		// Verificar si estamos en el front-page o en el home
+		if ( is_front_page() || is_home() ) {
+			// Agregar el script al encabezado
+			wp_enqueue_script( 'script-personalizado', get_stylesheet_directory_uri() . '/js/oli_nav_home.js', array(), false, false );
+		}
+	}
+	// Enganchar la función al hook wp_enqueue_scripts
+	add_action( 'wp_enqueue_scripts', 'oli_nav_home' );
 
 /**
  * Overrides the theme_mod to default to Bootstrap 5
